@@ -1,0 +1,8 @@
+Sistemas Operacionais desenvolvidos em Assembly
+Plano de pesquisa
+
+Tema: SO desenvolvidos em Assembly
+
+Problema: quais as características gerais sobre SO desenvolvidos em Assembly?
+
+Apêndice: demonstração/exemplos na prática
