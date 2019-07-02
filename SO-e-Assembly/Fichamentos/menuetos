@@ -1,0 +1,42 @@
+Referência:
+MENUETOS.NET. [S. l.], 22 jun. 2005. Disponível em: http://menuetos.net/index.htm. Acesso em: 1 jul. 2019.
+
+MENUETOS.NET. [S. l.], 22 jun. 2005. Disponível em: http://menuetos.net/download.htm. Acesso em: 1 jul. 2019.
+
+Citações:
+Citação indireta com autor incluído no texto: ... MenuetOS.net... (2005)
+
+Citação indireta com autor entre parênteses: ... (MENUETOS.NET..., 2005)
+
+##################################################
+
+
+O MenuetOS é um sistema operacional totalmente construído em Assembly. Isso poderia levar qualquer um a pensar que ele consistiria de um terminal com alguns recursos interessantes, mas os screenshots arregalam os olhos de qualquer entusiasta de Assembly e mostra que é possível fazer muita coisa sem sair do baixo nível. 
+
+A última versão do MenuetOS é a 1.31.40 lançada em 23/06/2019 (há menos de um mês!) e sua Release Note já induz o quão avançado esse sistema já é:
+
+    Release notes:
+
+    23.06.2019  1.31.40  Updates & improvements
+    - Menu, Alttab, Draw, Icons
+    - Faster GUI functions, bootup wallpaper resize
+    - SMP cpu0 OS reserve (config.mnt: smp_cpu0_os_reserve)
+    - Bootup MTRR change (config.mnt: mtrr_default)
+
+Das muitas características e funcionalidades do MenuetOS pode-se destacar:
+    não herda nada de outros sistemas (unix, posix)
+    préemptivo
+    real-time
+    suporte a multiprocessadores(até 32, SMP melhorado) e multithread
+    suporte a arquitetura x64, que suporta apps de 32 bits
+    suporte a até 32GB de RAM
+    GUI responsivo com resolução de até 1920x1080
+    IDE integrada (para Assembly)
+    inicializável a partir de pen-drive, cd e até disquete
+    suporte a TV digital
+    web-cam com QR-code reader
+    suporte para ethernet e servidor http
+    reprodutor mp3
+    sistema de arquivos FAT32
+    
+Segundo o site do MenuetOS, é fácil e rápido aprender a programar para a plataforma

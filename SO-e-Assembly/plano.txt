@@ -4,5 +4,8 @@ Plano de pesquisa
 Tema: SO desenvolvidos em Assembly
 
 Problema: quais as características gerais sobre SO desenvolvidos em Assembly?
+    MinuetSO 
+        so todo em Assembly
 
 Apêndice: demonstração/exemplos na prática
+    pen-drive bootavel ou máquina virtual? ou simplesmente um vídeo demonstrativo?
