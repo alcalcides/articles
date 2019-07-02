@@ -4,6 +4,21 @@ Plano de pesquisa
 Tema: SO desenvolvidos em Assembly
 
 Problema: quais as características gerais sobre SO desenvolvidos em Assembly?
+    Sistemas Operacionais
+        o sistema operacional mais vendido no mundo: windows
+        fundamentos
+            objetivos
+                abstração
+                gerência
+                [foto SO como interface]
+            elementos de um SO
+            interface gráfica não é o SO
+                imagens de diversas interfaces linux
+                    http://ninjadolinux.com.br/interfaces-graficas/
+            
+
+    Suse
+        criação de sua própria distro linux
     MinuetSO 
         so todo em Assembly
 
