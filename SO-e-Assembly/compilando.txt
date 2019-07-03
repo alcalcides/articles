@@ -1,0 +1,3 @@
+latex slide.tex && dvips slide.dvi && ps2pdf slide.ps && (evince slide.pdf &)
+
+pdflatex Sistemas-operacionais-desenvolvidos-em-Assembly.tex && (evince Sistemas-operacionais-desenvolvidos-em-Assembly.pdf &)

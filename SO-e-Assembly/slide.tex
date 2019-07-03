@@ -44,35 +44,43 @@
 %\usetheme{Singapore}
 %\usetheme{Szeged}
 %\usetheme{Warsaw}
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
 
-\title{Presentation Title}
+\title{Sistemas Operacionais em Assembly}
 
 % A subtitle is optional and this may be deleted
-\subtitle{Optional Subtitle}
+\subtitle{Uma abordagem "top-bottom" com foco prático}
 
-\author{F.~Author\inst{1} \and S.~Another\inst{2}}
+\author{Alcides Augusto
+  %\inst{1} 
+  \and 
+  Paulo Raimundo
+  %\inst{2}
+}
 % - Give the names in the same order as the appear in the paper.
 % - Use the \inst{?} command only if the authors have different
 %   affiliation.
 
-\institute[Universities of Somewhere and Elsewhere] % (optional, but mostly needed)
+\institute[Universidade Federal da Bahia] % (optional, but mostly needed)
 {
-  \inst{1}%
-  Department of Computer Science\\
-  University of Somewhere
-  \and
-  \inst{2}%
-  Department of Theoretical Philosophy\\
-  University of Elsewhere}
+  %\inst{1}%
+  Colegiado de Engenharia da Computação\\
+  Universidade Federal da Bahia\\
+  %\and
+  %\inst{2}%
+  %Department of Theoretical Philosophy\\
+  %University of Elsewhere
+}
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date{Conference Name, 2013}
+\date{MATA49 - Prog Software Básico, 2019-1}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
 
-\subject{Theoretical Computer Science}
+%\subject{Programação de Software Básico}
 % This is only inserted into the PDF information catalog. Can be left
 % out. 
 
@@ -99,16 +107,237 @@
   \titlepage
 \end{frame}
 
-\begin{frame}{Outline}
+\begin{frame}{Roteiro}
   \tableofcontents
   % You might wish to add the option [pausesections]
 \end{frame}
 
 % Section and subsections will appear in the presentation overview
 % and table of contents.
-\section{First Main Section}
+\section{Introdução}
+\subsection{Hardware}
+\subsection{Software}
+\subsection{Hard vs Software}
 
-\subsection{First Subsection}
+\section{SOs: fundamentos}
+
+\subsection{Objetivos de um SO}
+\subsection{Elementos de um SO}
+\subsection{Níveis de privilégio}
+\subsection{Chamadas de sistema}
+
+\section{SO na prática}
+
+\subsection{Suse Studio}
+\subsection{MikeOS}
+\subsection{MenuetOS}
+
+\section{Introdução}
+
+\subsection{Hardware}
+
+\begin{frame}{Introdução}
+  O que é um Sistema Computacional?
+\end{frame}
+
+\begin{frame}{Introdução}
+  O que é um Sistema Computacional?
+  \begin{itemize}
+    \item Hardware
+    \item Software
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Introdução}{Hardware}
+  O que é o Hardware?
+\end{frame}
+
+\begin{frame}{Introdução}{Hardware}
+  Tudo bem\dots Todo mundo aqui já sabe\dots Dispensa comentários\dots
+\end{frame}
+
+\begin{frame}{Introdução}{Hardware}
+  Mas permita-nos apenas destacar:
+  \begin{itemize}
+    \item O Hardware é máquina física\dots
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Hardware}
+  Permita-nos apenas destacar:
+  \begin{itemize}
+    \item O Hardware é máquina física que serve para\dots   
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Hardware}
+  Permita-nos apenas destacar:
+  \begin{itemize}
+    \item O Hardware é máquina física que serve para 
+    \item Fazer OPERAÇÕES ALGORÍTMICAS
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Hardware}
+  Permita-nos apenas destacar:
+  \begin{itemize}
+    \item O Hardware é máquina física que serve para 
+    \item Fazer OPERAÇÕES ALGORÍTMICAS
+    \item Mas para que fazer tantas OPERAÇÕES ALGORÍTMICAS???
+  \end{itemize}
+\end{frame}
+
+
+\subsection{Software}
+
+\begin{frame}{Introdução}{Software}
+  \begin{itemize}
+    \item Funcionalidades que o computador é capaz de promover
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Software}
+  \begin{itemize}
+    \item Funcionalidades que o computador é capaz de promover
+    \item Através de seus programas
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Software}
+  \begin{itemize}
+    \item Funcionalidades que o computador é capaz de promover
+    \item Através de seus programas
+    \item Essas funcionalidades são a abstração de programas
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Software}
+  \begin{itemize}
+    \item Funcionalidades que o computador é capaz de promover
+    \item Através de seus programas
+    \item Essas funcionalidades são a abstração de programas
+      \begin{itemize}
+        \item são o conjunto de instruções algorítmicas
+      \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Software}
+  \begin{itemize}
+    \item Funcionalidades que o computador é capaz de promover
+    \item Através de seus programas
+    \item Essas funcionalidades são a abstração de programas
+      \begin{itemize}
+        \item são o conjunto de instruções algorítmicas 
+        \item são geradas através das linguagens de programação.
+      \end{itemize}
+    \end{itemize}
+\end{frame}
+
+\subsection{Hard vs Software}
+
+\begin{frame}{Introdução}{Hard vs Software}
+  \begin{itemize}
+    \item O relacionamento entre Hardware e Software é "sensível"\dots
+      \begin{itemize}
+        \item Correspondência do tipo um-para-um?
+          \begin{itemize}
+            \item instruções da linguagem de programação 
+            \item instruções binárias do hardware
+          \end{itemize}
+        \item Tradução adequada de instruções
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Hard vs Software}
+  \begin{itemize}
+    \item O relacionamento entre Hardware e Software é "sensível"\dots
+      \begin{itemize}
+        \item Há vários tipos de processadores!
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Introdução}{Hard vs Software}
+  \begin{itemize}
+    \item O relacionamento entre Hardware e Software é "sensível"\dots
+      \begin{itemize}
+        \item Há vários tipos de processadores!
+        \item Portabilidade?!
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Hard vs Software}
+  \begin{itemize}
+    \item O relacionamento entre Hardware e Software é "sensível"\dots
+      \begin{itemize}
+        \item Há vários tipos de processadores!
+        \item Portabilidade?!
+        \item Segurança de dados?!
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Hard vs Software}
+  \begin{itemize}
+    \item O relacionamento entre Hardware e Software é "sensível"\dots
+      \begin{itemize}
+        \item Há vários tipos de processadores!
+        \item Portabilidade?!
+        \item Segurança de dados?!
+        \item Gestão de recursos computacionais?!
+      \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Introdução}{Hard vs Software}
+  E agora o que fazer?
+\end{frame}
+
+\begin{frame}{Introdução}{Hard vs Software}
+  Crie um \emph{Sistema Operacional!}
+\end{frame}
+
+\begin{frame}{Introdução}{Hard vs Software}
+  Crie um \emph{Sistema Operacional!}\\
+  "Solução do lado do Software"
+\end{frame}
+
+\section{SOs: fundamentos}
+\subsection{Objetivos de um SO}
+
+\begin{frame}{SOs: fundamentos}{Objetivos de um SO}
+  \begin{itemize}
+  \item Abstração
+  \item Gerência
+  \end{itemize}
+\end{frame}
+
+\subsection{Elementos de um SO}
+
+\begin{frame}{SOs: fundamentos}{Elementos de um SO}
+  \begin{itemize}
+  \item Programas utilitários
+  \item Drivers
+  \item Código de inicialização (boot code)
+  \item Núcleo (kernel)
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{First Slide Title}{Optional Subtitle}
+  \begin{itemize}
+  \item {
+    My first point.
+  }
+  \item {
+    My second point.
+  }
+  \end{itemize}
+\end{frame}
 
 \begin{frame}{First Slide Title}{Optional Subtitle}
   \begin{itemize}

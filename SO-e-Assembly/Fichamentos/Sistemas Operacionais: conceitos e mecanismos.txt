@@ -25,7 +25,7 @@ A dificuldade se avoluma ao constatar a diversidade de processadores: há divers
 
 Além disso, uma outra questão é como gerenciar os recursos computacionais como por exemplo a memória, de forma que as diversas aplicações que servem ao usuário não se choquem causando mútua interferência e fatal inconsistência. 
 
-É nesse ponto, onde aparece a necessidade de um intermediador entre o software e o hardware, que surge a criação do Sistema Operacional como uma medida adotada, segundo Maziero (2019, p. 2), do lado do software, para servir de interface entre as duas esferas e manter a consistência das aplicações. Também segundo esse autor (2019, p.3), seus objetivos básicos "podem ser sintetizados em duas palavras-chave: 'abstração' e 'gerência'"; aquela para promover portabilidade e esta para evitar os conflitos de uso de hardware.
+É nesse ponto onde aparece a necessidade de um intermediador entre o software e o hardware, que surge a criação do Sistema Operacional como uma medida adotada, segundo Maziero (2019, p. 2), do lado do software, para servir de interface entre as duas esferas e manter a consistência das aplicações. Também segundo esse autor (2019, p.3), seus objetivos básicos "podem ser sintetizados em duas palavras-chave: 'abstração' e 'gerência'"; aquela para promover portabilidade e esta para evitar os conflitos de uso de hardware.
 
 Maziero (2019) aproveita, ainda em seu primeiro capítulo, para elencar as seguintes categorias de Sistemas Operacionais: Batch (de lote), de rede, distribuído, multiusuário, servidor, desktop, móvel, embarcado e de tempo real. Além disso, ele cita o gerenciamento do processador, de memória, de dispositivos, de arquivo e de proteção como funcionalidades básicas de um SO.
 
