@@ -6,6 +6,8 @@ Citação com autor não incluído no texto: (MAZIERO, 2019)
 
 
 ##################################################
+imagem: SO como uma interface
+##################################################
 
 Um sistema computacional é constituído por hardware e software. Mariero (2019) dá uma definição  bastante prática sobre esses três termos:
 
@@ -27,4 +29,87 @@ Além disso, uma outra questão é como gerenciar os recursos computacionais com
 
 Maziero (2019) aproveita, ainda em seu primeiro capítulo, para elencar as seguintes categorias de Sistemas Operacionais: Batch (de lote), de rede, distribuído, multiusuário, servidor, desktop, móvel, embarcado e de tempo real. Além disso, ele cita o gerenciamento do processador, de memória, de dispositivos, de arquivo e de proteção como funcionalidades básicas de um SO.
 
-############################
+##################################################
+imagem: Estrutura de um sistema operacional típico
+##################################################
+
+Elementos de um SO
+
+programas utilitários
+    Programas utilitários
+        terminal
+        manipulador de arquivos 
+        interface gráfica
+            NÃO é o Sistema Operacional
+            Augusto (2016) traz uma série de interfaces gráficas da família Linux
+        gerência de telas 
+        configurações de dispositivos
+        formatação de discos e mídias
+        ***
+    Drivers
+        módulos de códigos específicos a um dispositivo
+            sata
+            usb
+            placa gráfica
+        comumente disponibilizado pelo fabricante do dispositivo    
+        acoplamento ao SO
+    Código de inicialização (boot code)
+        preparação dos dispositivos instalados
+        carregamento do núcleo do SO na memória RAM 
+    Núcleo (kernel)
+        "coração do sistema operacional"
+        gerência dos recursos de hardware
+        implementação de diversas abstrações para
+            aplicativos
+            utilitários do sistema
+        
+##################################################
+
+Níveis de privilégio
+    diferenciação quanto ao uso do hardware
+    implementado em flags especiais da cpu 
+        função do tipo de código em execução
+    tipos básicos
+        nível núcleo/supervisor/sistema/monitor/kernel space
+            todas as instruções
+            toda a memória
+            todos os regs
+            todas as portas i/o
+        nível user / userspace
+            subconjunto das instruções
+                não RESET 
+                não i/o
+                não jump
+                não call
+                não alocação de memória
+                não manipulação de arquivos
+            subconjunto dos regs
+            subconjunto de memória (segfault)
+            violão causa exceção a ser tratada => fechar o programa
+        o computador é ligado no nível núcleo
+    
+
+##################################################
+exemplo de syscall na p. 23
+##################################################
+
+Chamadas de sistema/system call/syscall (p. 22)
+
+forma de aplicações usarem rotinas de privilégio do núcleo
+SOs implementam system library
+    implementações de interrupções que realizam rotinas do kernel space 
+    trap/interrupção de software
+    fluxo de execução de chamada de sistema
+        recebe os parâmetros
+        prepara os registradores
+        executa a instrução em nível de núcleo
+            o processador comuta de nível durante a chamada
+        deporta os resultados à aplicação 
+API (Application programming interface)
+    conjunto de Chamadas de sistemas implementadas
+    exemplos    
+        win32
+            Microsoft
+        posix
+            padrão de interface para núcleo UNIX
+    categorias Maziero (2019, p. 25)

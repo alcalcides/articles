@@ -5,22 +5,33 @@ Tema: SO desenvolvidos em Assembly
 
 Problema: quais as características gerais sobre SO desenvolvidos em Assembly?
     Sistemas Operacionais
-        o sistema operacional mais vendido no mundo: windows
-        fundamentos
+        fundamentos 
             objetivos
                 abstração
                 gerência
                 [foto SO como interface]
             elementos de um SO
-            interface gráfica não é o SO
-                imagens de diversas interfaces linux
-                    http://ninjadolinux.com.br/interfaces-graficas/
-            
+                programas utilitários
+                    interface gráfica não é o SO
+                    imagens de diversas interfaces linux
+                        http://ninjadolinux.com.br/interfaces-graficas/
+                drivers 
+                código de inicialização
+                núcleo
+            níveis de privilégio
+            chamadas de sistema
 
-    Suse
-        criação de sua própria distro linux
-    MinuetSO 
-        so todo em Assembly
+        SUSE Studio
+            criação de sua própria distro linux
+            https://build.opensuse.org/image_templates
+        MikeOS
+            http://mikeos.berlios.de/
+        MinuetSO 
+            SO todo em Assembly
+            https://www.youtube.com/watch?v=7xtfcevDTBA
 
 Apêndice: demonstração/exemplos na prática
-    pen-drive bootavel ou máquina virtual? ou simplesmente um vídeo demonstrativo?
+    pen-drive bootavel ou máquina virtual? 
+    ou simplesmente um vídeo demonstrativo?
+    ou a demonstração do MinuetSO
+    ou criação de um so usando o Suse
