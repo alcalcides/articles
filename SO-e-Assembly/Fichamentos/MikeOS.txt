@@ -1,0 +1,61 @@
+Referência: MIKEOS (Org.). MikeOS. Disponível em: <http://mikeos.sourceforge.net/>. Acesso em: 03 jul. 2019.
+
+Citação com autor incluído no texto: Mikeos (2019)
+
+Citação com autor não incluído no texto: (MIKEOS, 2019)
+
+#########################################
+
+Referência: MIKEOS (Org.). MikeOS Handbook. 2019. Disponível em: <http://mikeos.sourceforge.net/handbook-user.html>. Acesso em: 03 jul. 2019.
+
+Citação com autor incluído no texto: Mikeos (2019)
+
+Citação com autor não incluído no texto: (MIKEOS, 2019)
+
+#########################################
+
+AUTOR Mike Saunders e outros
+
+características técnicas
+    todo em assemby
+    x86
+    regs de 16 bits
+    text-mode dialog e menu-driven interface
+        não é user friendly
+    bootável a partir de um disquete
+    mais de 60 system calls
+    interpretador BASIC de 46 instruções
+
+
+funcionalidade
+    otimizado para se aprender sobre SOs
+        código bem comentado (foto)]
+        documentação extensiva (fonte)
+    não foi feito para o dia-a-dia
+    gerenciador de arquivos
+    editor de texto
+    visualizador de imagens
+    jogos
+
+
+
+    (MIKEOS, 2019)
+    
+    Programs
+    MikeOS includes several programs to perform various tasks and demonstrate features of the OS, such as:
+
+    EDIT.BIN -- Simple full-screen text editor (Unix-type text files only)
+    EXAMPLE.BAS -- Demonstration of BASIC features (open it in EDIT.BIN to explore)
+    FILEMAN.BIN -- Delete, rename and copy files on the floppy disk
+    HANGMAN.BIN -- Guess the names of cities around the world
+    MEMEDIT.BAS -- Colourful, powerful memory editor
+    DRAW.BAS -- ASCII art drawing program
+    CALC.BAS -- Powerful calculator
+    SUDOKU.BAS -- Sudoku game
+    CF.BAS -- Cosmic Flight game
+    MUNCHER.BAS -- Snake-like game (use WASD keys)
+    ADVNTURE.BAS -- A text adventure
+    KEYBOARD.BIN -- Musical keyboard; use the bottom row of keys to play and Q to quit
+    MONITOR.BIN -- Simple machine code monitor (see below)
+    SERIAL.BIN -- Minicom-like serial terminal program (see below)
+    VIEWER.BIN -- Views text files and 320x200x16 PCX images such as SAMPLE.PCX

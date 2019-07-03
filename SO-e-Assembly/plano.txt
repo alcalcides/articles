@@ -25,7 +25,9 @@ Problema: quais as características gerais sobre SO desenvolvidos em Assembly?
             criação de sua própria distro linux
             https://build.opensuse.org/image_templates
         MikeOS
-            http://mikeos.berlios.de/
+            autor
+            principais funcionalidades
+            fotos
         MinuetSO 
             SO todo em Assembly
             https://www.youtube.com/watch?v=7xtfcevDTBA
