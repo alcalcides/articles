@@ -402,23 +402,95 @@
         
         \begin{frame}{SOs: fundamentos}{Elementos de um SO}{\bfseries{Núcleo (kernel)}}
           \begin{itemize}
-            \item "Coração" do sistema operacional
-            \item Gerência dos recursos de hardware
             \item Implementação de diversas abstrações para:
             \begin{itemize}
               \item Aplicativos
               \item Utilitários do sistema
             \end{itemize} 
+            \item "Coração" do sistema operacional
+            \begin{itemize}
+              \item O kernel Linux é um dos mais famosos e utilizados pela comunidade open source
+              \item O site Suse Studio disponibiliza a criação customizada de SO utilizando o kernel Linux e adicionando pacotes específicos com simples cliques
+            \end{itemize}
+            \item Gerência dos recursos de hardware
+            \begin{itemize}
+              \item Níveis de privilégio
+            \end{itemize} 
           \end{itemize}
         \end{frame}
 
-        \begin{frame}{SOs: fundamentos}{Elementos de um SO}{\bfseries{Núcleo (kernel)}}
+    \subsection{Níveis de privilégio}
+    
+      \begin{frame}{SOs: fundamentos}{Níveis de privilégio}{\bfseries{Nível núcleo}}
+        \begin{itemize}
+          \item Acepção de aplicações quanto ao uso dos recursos do hardware
           \begin{itemize}
-            \item O kenel Linux é um dos mais famosos e utilizados pela comunidade open source
-            \item O site Suse Studio disponibiliza a criação customizada de SO utilizando o kernel Linux e adicionando pacotes específicos com simples cliques
+            \item Nem todas as instruções de máquina estão disponíveis para todas as aplicações
           \end{itemize}
+          \item Flags especiais da cpu indicam o nível de privilégio da instrução
+          \begin{itemize}
+            \item Esses flags são em função do tipo de código!
+          \end{itemize}
+        \end{itemize}  
+      \end{frame}
+
+      \subsubsection{Nível núcleo}
+        \begin{frame}{SOs: fundamentos}{Níveis de privilégio}{\bfseries{Nível núcleo}}
+          \begin{itemize}
+            \item Nível núcleo = nível supervisor, sistema, monitor ou kernel space
+            \item Todas as instruções permitidas
+            \item Acesso a toda a memória
+            \item Acesso a todos os registradores
+            \item Acesso a todas as portas I/O
+            \item O computador liga no Nível núcleo
+          \end{itemize}  
         \end{frame}
+
+      \subsubsection{Nível user}
+        \begin{frame}{SOs: fundamentos}{Níveis de privilégio}{\bfseries{Nível user}}
+          \begin{itemize}
+            \item Nível user = user space
+            \item Exemplo de instrução não permitidas: RESET, I/O, jump, call, alocação de memória, manipulação de arquivos
+            \item Acesso a uma parte da memória (Segmentation fault!)
+            \item Acesso a um subconjunto dos registradores
+            \item Violação dos limites causa lançamento de exceção, podendo levar a interrupção e encerramento do programa
+            \item Aplicação desse nível podem fazer uso das chamadas de sistema
+          \end{itemize}  
+        \end{frame}
+  
+    \subsection{Chamadas de sistema}
+    
+      \begin{frame}{SOs: fundamentos}{Chamadas de sistema}
+        \begin{itemize}
+          \item É uma forma de aplicações usarem rotinas de privilégio do núcleo 
+          \item A proteção do sistema se mantém por causa da implementação das {\bfseries{system library}}
+          \begin{itemize}
+            \item Implementações de interrupções que realizam rotinas do kernel space
+            \item Trap/Interrupção de software
+          \end{itemize}
+          \item Fluxo de execução de chamada de sistema
+          \begin{itemize}
+            \item Recebimento dos parâmetros
+            \item Preparação dos registradores
+            \item Execução da instrução em nível de núcleo (comutação de nível no processador)
+            \item Deportação dos resultados à aplicação 
+          \end{itemize}
+        \end{itemize}  
+      \end{frame} 
+      
+      \begin{frame}{SOs: fundamentos}{Chamadas de sistema}
+        API (Application programming interface)
+        \begin{itemize}
+          \item Conjunto de Chamadas de sistemas implementadas
+          \begin{itemize}
+            \item win32 (Windows)
+            \item POSIX (Unix)
+          \end{itemize}
+        \end{itemize}  
+      \end{frame} 
+  
   \section{Prática}
+    
     \begin{frame}{Prática}
       Execução do Sistema Operacional MikeOS
       \begin{itemize}
