@@ -1,8 +1,11 @@
+*.ps
 ##pdf files
 *.pdf
 SO-e-Assembly/fig1.png
 ##Templates
 *Conference-LaTeX-template_7-9-18*
+SO-e-Assembly/slide.ps
+*.ps
 
 ## Core latex/pdflatex auxiliary files:
 *.aux
