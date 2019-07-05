@@ -1,17 +1,56 @@
-Referência: MAZIERO, Carlos A.. Sistemas Operacionais: conceitos e mecanismos. [s. L.]: [s. N.], 2019. 478 p. Disponível em: <http://wiki.inf.ufpr.br/maziero/doku.php?id=socm:start>. Acesso em: 02 jul. 2019.
+\documentclass[conference]{IEEEtran}
+%\IEEEoverridecommandlockouts
+% The preceding line is only needed to identify funding in the first footnote. If that is unneeded, please comment it out.
+\usepackage[brazil]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+\begin{document}
 
-Citação com autor incluído no texto: Maziero (2019)
+\title{Sistemas Operacionais: conceitos iniciais}
 
-Citação com autor não incluído no texto: (MAZIERO, 2019)
+\author{
+    \IEEEauthorblockN{%1\textsuperscript{st}
+        Alcides Augusto B Neto}
+    \IEEEauthorblockA{
+        \textit{UFBA} \\
+        \textit{Graduação Eng Computação}\\
+        Salvador, Brasil \\
+        alcalcides@hotmail.com}
+\and
+    \IEEEauthorblockN{%2\textsuperscript{nd} 
+        Paulo Raimundo da Silva Junior}
+    \IEEEauthorblockA{
+        \textit{UFBA} \\
+        \textit{Graduação Eng Computação}\\
+        Salvador, Brasil \\    
+        psjuniorx8@gmail.com}
+}
 
+\maketitle
 
-##################################################
-imagem: SO como uma interface
-##################################################
+\begin{abstract}
+Um Sistemas Operacional é um software que intermedia o hardware e outros softwares. Ele serve para gerenciar os recursos e abstrair suas funcionalidades. Para isso, é composto, pelo menos nos sistemas modernos, de um kernel, um bootloader, drivers e programas utilitários variados. Sua boa eficiência depende da implementação dos níveis de privilégio e das chamadas de sistema, que constituem a API do sistema.
+\end{abstract}
 
-Um sistema computacional é constituído por hardware e software. Mariero (2019) dá uma definição  bastante prática sobre esses três termos:
+\begin{IEEEkeywords}
+Sistemas Operacionais, kernel, bootloader, drivers, níveis de prioridade, system call, API.
+\end{IEEEkeywords}
 
+\section{Introduction}
+Um sistema computacional é constituído por hardware e software. Mariero (2019) dá uma definição bastante prática sobre esses três termos:
+
+\begin{quote}
     Um sistema de computação é constituído basicamente por hardware e software. O hardware é composto por circuitos eletrônicos (processador, memória, portas de entrada/saída, etc.) e periféricos eletro-óptico-mecânicos (teclados, mouses, discos rígidos, unidades de disquete, CD ou DVD, dispositivos USB, etc.). Por sua vez, o software de aplicação é representado por programas destinados ao usuário do sistema, que constituem a razão final de seu uso, como editores de texto,navegadores Internet ou jogos (p. 2)
+
+\end{quote}
 
 O hardware é o conjunto dos aparatos materiais que dão forma e recursos tecnológicos suficientes à uma máquina para que ela seja capaz de realizar instruções algorítmicas. A propósito, o que basicamente diferencia esta máquina, chamada de computador, das outras historicamente anteriores, como uma máquina de tear, é a capacidade de realizar um trabalho muito específico: justamente as operações algorítmicas. Ou seja, o que o hardware faz, em sua essência, são operações bem básicas como somar, comparar valores, manipular a memória etc. 
 
@@ -19,77 +58,47 @@ Já o software está mais relacionado às funcionalidades que o computador é ca
 
 Assim, as linguagens de programação, estão relacionadas com o hardware do sistema no sentido em que há uma "simbiose" entre essas esferas da computação; os programas gerados pelas linguagens são executados pelo hardware, depois de serem adequadamente traduzidos para a linguagem da máquina. Ou seja, quem trabalha mesmo é o hardware e o programa apenas o manipula para gerar a abstração. Uma feliz relação "patrão esperto/funcionário analfabeto" que muito beneficia a sociedade.
 
+\subsection{Hardware versus Software}
+
 Entretanto, o relacionamento entre o hardware e o software passa por complexidades cruciais. Primeiro: não necessariamente há uma correspondência do tipo um-para-um entre as instruções da linguagem de programação e as instruções binárias do hardware. Cada processador tem, em sua documentação, a definição de sua liguagem de trabalho, que é seu conjunto de instruções e recursos. Isso sugere que, do outro lado, cada programa tem que ser adequadamente traduzido (compilado ou interpretado) a fim haver compatibilidade com o hardware que, depois de executar as operações, disponibiliza os resultados, os quais são colhidos e adequadamente interpretados pelo software. Nas aplicações modernas, esse ciclo é intensamente retomado.
 
 A dificuldade se avoluma ao constatar a diversidade de processadores: há diversos fabricantes, com diversos modelos, com recursos extra variados, várias arquiteturas possíveis, com suporte a vários outros tipos de equipamentos de hardware e extensão e, dessa forma, surgiria um gigantesco problema de portabilidade de software.
 
 Além disso, uma outra questão é como gerenciar os recursos computacionais como por exemplo a memória, de forma que as diversas aplicações que servem ao usuário não se choquem causando mútua interferência e fatal inconsistência. 
 
-É nesse ponto onde aparece a necessidade de um intermediador entre o software e o hardware, que surge a criação do Sistema Operacional como uma medida adotada, segundo Maziero (2019, p. 2), do lado do software, para servir de interface entre as duas esferas e manter a consistência das aplicações. Também segundo esse autor (2019, p.3), seus objetivos básicos "podem ser sintetizados em duas palavras-chave: 'abstração' e 'gerência'"; aquela para promover portabilidade e esta para evitar os conflitos de uso de hardware.
+É nesse ponto onde aparece a necessidade de um intermediador entre o software e o hardware.
+
+\section{Sistemas Operacionais: fundamentos}
+
+\subsection{Objetivos de um Sistema Operacional}
+
+Um Sistema Operacional surge como uma medida adotada, segundo Maziero (2019, p. 2), do lado do software, para servir de interface entre as duas esferas e manter a consistência das aplicações. Também segundo esse autor (2019, p.3), seus objetivos básicos "podem ser sintetizados em duas palavras-chave: 'abstração' e 'gerência'"; aquela para promover portabilidade e esta para evitar os conflitos de uso de hardware.
 
 Maziero (2019) aproveita, ainda em seu primeiro capítulo, para elencar as seguintes categorias de Sistemas Operacionais: Batch (de lote), de rede, distribuído, multiusuário, servidor, desktop, móvel, embarcado e de tempo real. Além disso, ele cita o gerenciamento do processador, de memória, de dispositivos, de arquivo e de proteção como funcionalidades básicas de um SO.
 
-##################################################
-imagem: Estrutura de um sistema operacional típico
-##################################################
-
-Elementos de um SO
+\subsection{Elementos}
 
 Pelo contrário do que muitos usuários comuns pensam, um sistema operacional é um conjunto de softwares que operam em várias camadas criando a abstração com a qual todos já estão habituados. Mas ele se constitui de diversas partes e, para o melhor esclarecimento possível, as mais básicas delas estão elencadas a seguir com suas características mais relevantes para esta obra.
 
-
-Programas utilitários
+\subsubsection{Programas utilitários}
 
 Todo sistema operacional, ao ser instalado, já oferece um conjunto de programas já em funcionamento, geralmente composto de: um terminal de comandos, gerenciador de arquivos, formatação de discos e mídia, configurações de dispositivos e interface gráfica. 
 
 É importante salientar que a interface gráfica é um elemento do sistema operacional. Como é comum, a cada troca de versão, a instituição lançar uma nova interface mais bonita e amigável, os usuários comuns acambam confundindo esses dois conceitos. A plataforma linux é um ótimo aparato para demonstrar que um sistema operacional pode ter sua interface gráfica trocada sem alterar as outras partes elencadas a seguir.
 
-Drivers
+\subsubsection{Drivers}
 
 São módulo de códigos específicos que permite ao sistema operacional comunicar-se com determinado dispositivo de hardware. Eles são comumente disponibilizados pelo fabricante do equipamento e, uma vez acoplado ao hardware e instalado no SO, permite seu uso.
 
-Código de inicialização (boot code)
+\subsubsection{Código de inicialização (boot code)}
 
 É o responsável por carregar o sistema operacional na memória RAM. O BIOS ou UEFI, que são tecnologia do hardware, acionam o bootloader do SO que, a partir daí, controla (ou deve sempre controlar) os demais eventos até o desligamento da máquina.
 
-Núcleo (kernel)
+\subsubsection{Núcleo (kernel)}
 
 É o coração do sistema operacional. Ele tem acesso a todos os recursos do processador e gerencia seus recursos. Também exerce a importantíssima função de abstração dos recursos para aplicativos e utilitários do sistema.
 
-
-Elementos de SO
-
-programas utilitários
-    Programas utilitários
-        terminal
-        manipulador de arquivos 
-        interface gráfica
-            NÃO é o Sistema Operacional
-            Augusto (2016) traz uma série de interfaces gráficas da família Linux
-        gerência de telas 
-        configurações de dispositivos
-        formatação de discos e mídias
-        ***
-    Drivers
-        módulos de códigos específicos a um dispositivo
-            sata
-            usb
-            placa gráfica
-        comumente disponibilizado pelo fabricante do dispositivo    
-        acoplamento ao SO
-    Código de inicialização (boot code)
-        preparação dos dispositivos instalados
-        carregamento do núcleo do SO na memória RAM 
-    Núcleo (kernel)
-        "coração do sistema operacional"
-        gerência dos recursos de hardware
-        implementação de diversas abstrações para
-            aplicativos
-            utilitários do sistema
-        
-##################################################
-
-Níveis de privilégio
+\subsection{Níveis de privilégio}
 
 Há dois níveis opostos de privilégio, podendo haver diversos outros intermediários: o nível de usuário e o de núcleo. Há diversos outos nomes para eles: nível núcleo ou supervisor, de sistema, monitor ou kernel space; já o nível user também é referido como userspace. 
 
@@ -99,37 +108,7 @@ O nível kernel é dado ao SO que se apropria dele para gerenciar os níveis das
 
 Se uma aplicação de nível user quebra um desses limites, uma exceção é lançada e o SO pode interromper e finalizar o programa. Um exemplo disso são as falhas de segmentação (Segmentation fault), que ocorre quando um programa acessa área de memória não permitida. 
 
-
-
-Níveis de privilégio
-    diferenciação quanto ao uso do hardware
-    implementado em flags especiais da cpu 
-        função do tipo de código em execução
-    tipos básicos
-        nível núcleo/supervisor/sistema/monitor/kernel space
-            todas as instruções
-            toda a memória
-            todos os regs
-            todas as portas i/o
-        nível user / userspace
-            subconjunto das instruções
-                não RESET 
-                não i/o
-                não jump
-                não call
-                não alocação de memória
-                não manipulação de arquivos
-            subconjunto dos regs
-            subconjunto de memória (segfault)
-            violão causa exceção a ser tratada => fechar o programa
-        o computador é ligado no nível núcleo
-    
-
-##################################################
-exemplo de syscall na p. 23
-##################################################
-
-Chamadas de sistema
+\subsection{Chamadas de sistema}
 
 Se os níveis de privilégio não pudessem ser contornados de forma tal que uma aplicação pudesse gozar dos recursos que o hardware oferece, poucas seriam as funcionalidades que um computador poderia ter sem abrir mão da segurança. Para contornar isso, os SOs implementam as chamadas de sistema, system call ou ainda syscall, que são uma forma de permitir às aplicações os recursos do hardware sem que elas o acessem diretamente. Ao conjunto de chamadas de sistema que um SO disponibiliza da-se a definição de API(Application programming interface). A API dos núcleos de padrão UNIX é chamada POSIX. O sistema Windows da Microsoft usa o win32.
 
@@ -138,23 +117,10 @@ As chamadas de sistema são implementadas através de interrupções: a aplicaç
 Cada SO tem um conjunto de chamadas de sistema que constitui sua API (Application programming interface). A API do Windows, SO da Microsoft, é o win32. A POSIX é a API para núcleo UNIX.
 
 
-Chamadas de sistema/system call/syscall (p. 22)
+\section*{}
 
-forma de aplicações usarem rotinas de privilégio do núcleo
-SOs implementam system library
-    implementações de interrupções que realizam rotinas do kernel space 
-    trap/interrupção de software
-    fluxo de execução de chamada de sistema
-        recebe os parâmetros
-        prepara os registradores
-        executa a instrução em nível de núcleo
-            o processador comuta de nível durante a chamada
-        deporta os resultados à aplicação 
-API (Application programming interface)
-    conjunto de Chamadas de sistemas implementadas
-    exemplos    
-        win32
-            Microsoft
-        posix
-            padrão de interface para núcleo UNIX
-    categorias Maziero (2019, p. 25)
+\begin{thebibliography}{00}
+\bibitem{MAZIERO} MAZIERO, Carlos A.. Sistemas Operacionais: conceitos e mecanismos. [s. L.]: [s. N.], 2019. 478 p. Disponível em: {http://wiki.inf.ufpr.br/maziero/doku.php?id=socm:start}. Acesso em: 02 jul. 2019.
+\end{thebibliography}
+
+\end{document}
