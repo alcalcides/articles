@@ -2,6 +2,9 @@
 ##pdf files
 *.pdf
 SO-e-Assembly/fig1.png
+SO-e-Assembly/figuras
+SO-e-Assembly/apresentacao
+
 ##Templates
 *Conference-LaTeX-template_7-9-18*
 SO-e-Assembly/slide.ps
